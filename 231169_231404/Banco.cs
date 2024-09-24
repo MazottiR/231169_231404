@@ -56,6 +56,11 @@ namespace _231169_231404
 
                 Comando.ExecuteNonQuery();
 
+                Comando = new MySqlCommand("CREATE TABLE IF NOT EXISTS cidades; " + "(id integer auto_increment primarykey, "
+                    + "nome char(40), " + "uf char(02))", Conexao);
+
+                Comando.ExecuteNonQuery();
+
                 FecharConexao();
             }
             catch (Exception e)
