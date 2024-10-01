@@ -125,6 +125,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Views\FrmCidades.resx">
       <DependentUpon>FrmCidades.cs</DependentUpon>
@@ -145,6 +146,14 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Imagem\curva-a-3direita.png" />
+    <Content Include="Imagem\de3sligar.png" />
+    <Content Include="Imagem\li3xeira.png" />
+    <Content Include="Imagem\lu3pa.png" />
+    <Content Include="Imagem\mai3s.png" />
+    <Content Include="Imagem\seta-para-atualiz3ar.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
