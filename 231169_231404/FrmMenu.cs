@@ -21,5 +21,10 @@ namespace _231169_231404
         {
             Banco.CriarBanco();
         }
+
+        private void cadastrosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
