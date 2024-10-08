@@ -8,13 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using vendas.Models;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace _231169_231404.Views
 {
-    public partial class FrmCidades : Form
+    public partial class FrmMarcas : Form
     {
-        Cidade c;
-        public FrmCidades()
+        Marcas c;
+        public FrmMarcas()
         {
             InitializeComponent();
         }
@@ -24,13 +25,12 @@ namespace _231169_231404.Views
         {
             textBox1.Clear();
             textBox2.Clear();
-            textBox3.Clear();
             textBox4.Clear();
         }
 
         void carregarGrid(string pesquisa)
         {
-            c = new Cidade();
+            c = new Marcas();
             {
                 marca = pesquisa;
             };
@@ -47,7 +47,7 @@ namespace _231169_231404.Views
         {
             if (textBox2.Text == string.Empty) return;
 
-            c = new Cidade();
+            c = new Marcas();
             {
                 marca = textBox2.Text;
             };
@@ -69,7 +69,7 @@ namespace _231169_231404.Views
         private void button2_Click(object sender, EventArgs e)
         {
             if (textBox1.Text == string.Empty) return;
-            c = new Cidade();
+            c = new Marcas();
             {
                 id = int.Parse(textBox1.Text);
                 marca = textBox2.Text;
@@ -87,7 +87,7 @@ namespace _231169_231404.Views
             if (MessageBox.Show("Deseja excluir a cidade?", "Exclusão",
                 MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                c = new Cidade();
+                c = new Marcas();
                 {
                     id = int.Parse(textBox1.Text);
                 };
@@ -159,13 +159,17 @@ namespace _231169_231404.Views
 
         }
 
+        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
         private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (dataGridView2.RowCount > 0)
             {
                 textBox1.Text = dataGridView2.CurrentRow.Cells["id"].Value.ToString();
-                textBox2.Text = dataGridView2.CurrentRow.Cells["nome"].Value.ToString();
-                textBox3.Text = dataGridView2.CurrentRow.Cells["uf"].Value.ToString();
+                textBox2.Text = dataGridView2.CurrentRow.Cells["marca"].Value.ToString();
             }
         }
     }

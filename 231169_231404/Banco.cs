@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using System.Data.SqlClient;
 
 namespace _231169_231404
 {
@@ -58,6 +59,11 @@ namespace _231169_231404
 
                 Comando = new MySqlCommand("CREATE TABLE IF NOT EXISTS cidades; " + "(id integer auto_increment primarykey, "
                     + "nome char(40), " + "uf char(02))", Conexao);
+
+                Comando.ExecuteNonQuery();
+
+                Comando = new MySqlCommand("CREATE TABLE IF NOT EXISTS marcas; " + "(id integer auto_increment primarykey, "
+                    + "marca char(40),", Conexao);
 
                 Comando.ExecuteNonQuery();
 

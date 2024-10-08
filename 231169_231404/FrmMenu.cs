@@ -1,4 +1,5 @@
-﻿using System;
+﻿using _231169_231404.Views;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using vendas.Views;
 
 namespace _231169_231404
 {
@@ -25,6 +27,12 @@ namespace _231169_231404
         private void cadastrosToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void cidadesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmCidades form = new FrmCidades();
+            form.Show();
         }
     }
 }
