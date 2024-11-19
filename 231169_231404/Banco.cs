@@ -63,7 +63,11 @@ namespace _231169_231404
                 Comando.ExecuteNonQuery();
 
                 Comando = new MySqlCommand("CREATE TABLE IF NOT EXISTS marcas; " + "(id integer auto_increment primarykey, "
-                    + "marca char(40),", Conexao);
+                    + "marca char(40), ", Conexao);
+
+                Comando = new MySqlCommand("CREATE TABLE IF NOT EXISTS produtos; " + "(id integer auto_increment primarykey, "
+                    + "descricao char(40), " + "idCategoria integer, " + "idMarca integer, " + "estoque decimal(10,3), " + "valorVenda decimal(10,2), "
+                    + "foto varchar(100))", Conexao);
 
                 Comando.ExecuteNonQuery();
 
