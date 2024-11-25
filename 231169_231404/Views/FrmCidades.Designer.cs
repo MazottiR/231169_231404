@@ -1,6 +1,6 @@
 ﻿using System.Drawing;
 
-namespace _231169_231404.Views
+namespace vendas.Views
 {
     partial class FrmCidades
     {
@@ -226,6 +226,7 @@ namespace _231169_231404.Views
             this.dataGridView2.Size = new System.Drawing.Size(480, 147);
             this.dataGridView2.TabIndex = 14;
             this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellClick);
+            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
             // FrmCidades
             // 

@@ -4,9 +4,10 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MySql.Data.MySqlClient;
 using System.Windows.Forms;
 
-namespace _231169_231404
+namespace vendas.Models
 {
     public class Cidade
     {
@@ -80,7 +81,7 @@ namespace _231169_231404
                 Banco.AbrirConexao();
                 Banco.Comando = new MySqlCommand("SELECT * FROM Cidades where nome like @Nome " + "order by nome", Banco.Conexao);
                 Banco.Comando.Parameters.AddWithValue("@Nome", nome + "%");
-                Banco.Adaptador = new MySqlDataAdapter(Banco.datTabela);
+                Banco.Adaptador = new MySqlDataAdapter(Banco.Comando);
                 Banco.datTabela = new System.Data.DataTable();
                 Banco.Adaptador.Fill(Banco.datTabela);
                 Banco.FecharConexao();

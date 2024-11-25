@@ -1,4 +1,4 @@
-﻿namespace _231169_231404.Views
+﻿namespace vendas.Views
 {
     partial class FrmMarcas
     {
@@ -208,6 +208,7 @@
             this.Controls.Add(this.textBox1);
             this.Name = "FrmMarcas";
             this.Text = "FrmMarcas";
+            this.Load += new System.EventHandler(this.FrmMarcas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

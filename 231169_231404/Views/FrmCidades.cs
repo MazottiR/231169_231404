@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using vendas.Models;
 
-namespace _231169_231404.Views
+namespace vendas.Views
 {
     public partial class FrmCidades : Form
     {
@@ -167,6 +167,11 @@ namespace _231169_231404.Views
                 textBox2.Text = dataGridView2.CurrentRow.Cells["nome"].Value.ToString();
                 textBox3.Text = dataGridView2.CurrentRow.Cells["uf"].Value.ToString();
             }
+        }
+
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

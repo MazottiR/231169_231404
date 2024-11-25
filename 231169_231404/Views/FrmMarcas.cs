@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using vendas.Models;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
-namespace _231169_231404.Views
+namespace vendas.Views
 {
     public partial class FrmMarcas : Form
     {
@@ -171,6 +171,11 @@ namespace _231169_231404.Views
                 textBox1.Text = dataGridView2.CurrentRow.Cells["id"].Value.ToString();
                 textBox2.Text = dataGridView2.CurrentRow.Cells["marca"].Value.ToString();
             }
+        }
+
+        private void FrmMarcas_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿using _231169_231404.Views;
+﻿using vendas.Views;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,9 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using vendas.Views;
 
-namespace _231169_231404
+namespace vendas
 {
     public partial class FrmMenu : Form
     {

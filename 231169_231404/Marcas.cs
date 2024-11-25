@@ -5,14 +5,15 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MySql.Data.MySqlClient;
 using System.Windows.Forms;
 
-namespace _231169_231404
+namespace vendas.Models
 {
     public class Marcas
     {
         public int id { get; set; }
-
+            
         public string marca { get; set; }
 
         public void Incluir()
@@ -77,7 +78,7 @@ namespace _231169_231404
                 Banco.AbrirConexao();
                 Banco.Comando = new MySqlCommand("SELECT * FROM marcas where marca like @marca " + "order by nome", Banco.Conexao);
                 Banco.Comando.Parameters.AddWithValue("@marca", marca + "%");
-                Banco.Adaptador = new MySqlDataAdapter(Banco.datTabela);
+                Banco.Adaptador = new MySqlDataAdapter(Banco.Comando);
                 Banco.datTabela = new System.Data.DataTable();
                 Banco.Adaptador.Fill(Banco.datTabela);
                 Banco.FecharConexao();

@@ -1,4 +1,4 @@
-﻿namespace _231169_231404
+﻿namespace vendas
 {
     partial class FrmMenu
     {

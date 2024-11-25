@@ -8,7 +8,7 @@ using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using System.Data.SqlClient;
 
-namespace _231169_231404
+namespace vendas
 {
     public class Banco
     {
@@ -64,6 +64,18 @@ namespace _231169_231404
 
                 Comando = new MySqlCommand("CREATE TABLE IF NOT EXISTS marcas; " + "(id integer auto_increment primarykey, "
                     + "marca char(40), ", Conexao);
+
+                Comando = new MySqlCommand("CREATE TABLE IF NOT EXISTS categorias; " + "(id integer auto_increment primarykey, "
+                    + "categoria char(40), ", Conexao);
+
+                Comando = new MySqlCommand("CREATE TABLE IF NOT EXISTS clientes; " + "(id integer auto_increment primarykey, "
+                    + "nome varchar(40), " +
+                    "idCidade integer, " +
+                    "dataNasc date, " +
+                    "renda decimal(10,2), " +
+                    "cpf char(14), " +
+                    "foto varchar(100), " +
+                    "venda boolean)", Conexao);
 
                 Comando = new MySqlCommand("CREATE TABLE IF NOT EXISTS produtos; " + "(id integer auto_increment primarykey, "
                     + "descricao char(40), " + "idCategoria integer, " + "idMarca integer, " + "estoque decimal(10,3), " + "valorVenda decimal(10,2), "
