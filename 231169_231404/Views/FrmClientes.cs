@@ -22,6 +22,15 @@ namespace vendas.Views
             InitializeComponent();
         }
 
+        void carregarGrid(string pesquisa)
+        {
+            cl = new Cliente();
+            {
+                nome = pesquisa;
+            };
+            dvgClientes.DataSource = cl.Consultar();
+        }
+
         void limpaControles()
         {
             txtID.Clear();
@@ -45,7 +54,7 @@ namespace vendas.Views
             limpaControles();
             carregarGrid("");
 
-            dgvClientes.Columns["idCidade"].Visible = false;
+            dvgClientes.Columns["idCidade"].Visible = false;
             dvgClientes.Columns["foto"].Visible = false;
         }
 

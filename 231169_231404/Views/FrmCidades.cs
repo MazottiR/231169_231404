@@ -32,7 +32,7 @@ namespace vendas.Views
         {
             c = new Cidade();
             {
-                marca = pesquisa;
+                nome = pesquisa;
             };
             dataGridView2.DataSource = c.Consultar();
         }

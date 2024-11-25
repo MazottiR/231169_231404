@@ -12,7 +12,7 @@ namespace vendas.Models
     public class Cliente
     {
         public int id { get; set; }
-        public string name { get; set; }
+        public string nome { get; set; }
         public int idCidade { get; set; }
         public DateTime dataNasc { get; set; }
         public double renda { get; set; }
@@ -91,7 +91,7 @@ namespace vendas.Models
                 Banco.Comando = new MySqlCommand("SELECT cl.*, ci.nome cidade, " +
                     "ci.uf FROM clientes cl inner join cidades ci on (ci.id = cl.idCidade) " +
                     "where cl.nome like ?Nome order by cl.nome", Banco.Conexao);
-                Banco.Comando.Parameters.AddWithValue("@Nome" nome + "%");
+                Banco.Comando.Parameters.AddWithValue("@Nome", nome + "%");
                 Banco.Adaptador = new MySqlDataAdapter(Banco.Comando);
                 Banco.datTabela = new DataTable();
                 Banco.Adaptador.Fill(Banco.datTabela);
