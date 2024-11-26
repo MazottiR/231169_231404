@@ -81,6 +81,18 @@ namespace vendas
                     + "descricao char(40), " + "idCategoria integer, " + "idMarca integer, " + "estoque decimal(10,3), " + "valorVenda decimal(10,2), "
                     + "foto varchar(100))", Conexao);
 
+                Comando = new MySqlCommand("CREATE TABLE IF NOT EXISTS VendaCab; " + "(id integer auto_increment primarykey, "
+                    + "idCliente int, " +
+                    "data date, " +
+                    "total decimal(10,2))", Conexao);
+
+                Comando = new MySqlCommand("CREATE TABLE IF NOT EXISTS VendaCab; " + "(id integer auto_increment primarykey, "
+                    + "idVendaCab int, " +
+                    "idProduto int, " +
+                    "qtde decimal(10,3))" + 
+                    "valorUnitario decimal(10,2)", Conexao);
+                
+
                 Comando.ExecuteNonQuery();
 
                 FecharConexao();
